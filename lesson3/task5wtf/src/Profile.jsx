@@ -1,8 +1,16 @@
 import React from 'react';
 import moment from 'moment';
 
-const formatDate = date => 
-  moment(date).format("DD MMM YY");
+// const formatDate = date => 
+//   moment(date).format("DD MMM YY");
+
+const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const getDateBirth = date => {
+    const day = new Date(date).getDate();
+    const year = new Date(date).getYear();
+    const month = monthList[new Date(date).getMonth()];
+    return `${day} ${month} ${year}`;
+};
 
 const Profile = (props) => {
     return (
@@ -11,7 +19,7 @@ const Profile = (props) => {
                 {`${props.userData.firstName} ${props.userData.lastName}`}
             </div>
             <div className="profile__birth">
-                {`Was born ${formatDate(props.userData.birthDate)}
+                {`Was born ${getDateBirth(props.userData.birthDate)}
                  in ${props.userData.birthPlace}`}
             </div>
         </>
