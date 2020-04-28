@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import './counter.scss';
 
 class Counter extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            counter: 17,
+            counter: props.start,
         };
 
         //Do not do this way
@@ -13,7 +13,7 @@ class Counter extends Component {
             this.setState({
                 counter: this.state.counter + 1
             });
-        }, 1000);
+        }, props.interval);
     }
 
     render() {
