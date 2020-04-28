@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import './counter.scss';
 
-let counter = 0;
-
 class Counter extends Component {
     constructor() {
         super();
         this.state = {
-            counter: 0,
+            counter: 17,
         };
 
         //Do not do this way
