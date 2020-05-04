@@ -12,8 +12,6 @@ class ConnectionStatus extends Component {
         this.setState({
             status: e.type,
         });
-        console.log(e);
-        
     }
 
     componentDidMount() {
