@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 
 class UserForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "",
-            student: "",
-            occupation: "",
-            about: "",
-        };
-    }
-    
+    state = {
+        name: "",
+        student: "",
+        occupation: "",
+        about: "",
+    };
 
     handleChange = (e) => {
         const { name, value, checked, type } = e.target;
@@ -22,14 +18,14 @@ class UserForm extends Component {
         });
     };
 
-    handleSubmit = (e) => {
+    createUser = (e) => {
         e.preventDefault();
-        this.props.onSubmit(this.state);
+        console.log(this.state);
     };
 
     render() {
         return (
-            <form className="login-form" onSubmit={this.handleSubmit}>
+            <form className="login-form" onSubmit={this.createUser}>
                 <h1 className="form-title">Profile</h1>
                 <div className="form-control">
                     <label className="form-label" htmlFor="name">
