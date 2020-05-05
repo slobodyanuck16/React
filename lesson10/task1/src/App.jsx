@@ -25,7 +25,7 @@ class Page extends Component {
         return (
             <div className="page">
                 <header className="header">
-                    <UserMenu userData={this.state.userData}/>
+                    <UserMenu userData={this.state.userData} />
                 </header>
                 <UserProfile userData={this.state.userData} />
             </div>

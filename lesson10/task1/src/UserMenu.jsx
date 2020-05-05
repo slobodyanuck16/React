@@ -7,7 +7,7 @@ const UserMenu = ({userData}) => {
     const {name, avatar_url} = userData;
     return (
         <div className="menu">
-            <span className="menu__greeting">Hello, {name}</span>
+            <span className="menu__greeting">{name}</span>
             <img
                 alt="User Avatar"
                 src={avatar_url}
