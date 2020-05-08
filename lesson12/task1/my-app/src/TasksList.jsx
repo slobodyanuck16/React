@@ -36,7 +36,7 @@ class TasksList extends Component {
     handleTaskStatusChange = (id) => {
         const { done, text } = this.state.tasks.find((task) => task.id === id);
         const updatedTask = {
-            text,
+            ...text,
             done: !done,
         };
 
