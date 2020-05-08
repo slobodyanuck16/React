@@ -4,35 +4,29 @@ export const createTask = (taskData) => {
     return fetch(baseUrl, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json;utc-8",
+            "Content-Type": "application/json;utf-8",
         },
         body: JSON.stringify(taskData),
     }).then((response) => {
-        if (!response.ok) {
-            throw new Error("Failed to create task");
-        }
+        if (!response.ok) throw new Error("Failed to create task");
     });
 };
 
 export const fetchTasksList = () => {
-    return fetch(baseUrl).then((res) => {
-        if (res.ok) {
-            return res.json();
-        }
+    return fetch(baseUrl).then((response) => {
+        if (response.ok) return response.json();
     });
 };
 
 export const updateTask = (taskId, taskData) => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: "PUT",
-        headers: {
-            "Content-Type": "application/json;utc-8",
+        header: {
+            "Content-Type": "application/json;utf-8",
         },
         body: JSON.stringify(taskData),
     }).then((response) => {
-        if (!response.ok) {
-            throw new Error("Failed to update task");
-        }
+        if (!response.ok) throw new Error("Failed to change status of task");
     });
 };
 
@@ -40,8 +34,6 @@ export const deleteTask = (taskId) => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: "DELETE",
     }).then((response) => {
-        if (!response.ok) {
-            throw new Error("Failed to delete task");
-        }
+        if (!response.ok) throw new Error("Failed to delete task");
     });
 };
