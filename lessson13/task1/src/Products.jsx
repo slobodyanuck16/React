@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-function Products() {
+function Products () {
     return (
         <div className="page__content">
             <h1>Products</h1>
@@ -9,5 +9,6 @@ function Products() {
             <Link to="/contacts">Contacts</Link>
         </div>
     );
-}
+};
+
 export default Products;
