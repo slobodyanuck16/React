@@ -1,9 +1,10 @@
-import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import Home from "./Home";
-import Users from "./Users";
+import React from 'react';
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import Users from './Users';
+import Home from './Home';
 
 const App = () => {
+    
     return (
         <div className="page">
             <BrowserRouter>
@@ -19,11 +20,12 @@ const App = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/users" component={Users} />
+                    <Route path="/users" component={Users}/>
                 </Switch>
             </BrowserRouter>
         </div>
     );
-};
+    
+}
 
 export default App;
