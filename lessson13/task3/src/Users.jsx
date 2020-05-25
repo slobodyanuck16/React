@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import User from "./User";
 
-function Products({ match }) {
+function Users({ match }) {
     return (
         <div className="page__content">
             <h1>Products</h1>
@@ -23,4 +23,4 @@ function Products({ match }) {
         </div>
     );
 }
-export default Products;
+export default Users;
