@@ -1,11 +1,12 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import Products from "./Products";
-import Contacts from "./Contacts";
-import PageNotFound from "./PageNotFound";
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Contacts from './Contacts';
+import Products from './Products';
+import Home from './Home';
+import PageNotFound from './PageNotFound';
 
 const App = () => {
+    
     return (
         <div className="page">
             <BrowserRouter>
@@ -14,7 +15,7 @@ const App = () => {
                         <Home />
                     </Route>
                     <Route path="/products">
-                        <Products />
+                        <Products /> 
                     </Route>
                     <Route path="/contacts">
                         <Contacts />
@@ -26,6 +27,7 @@ const App = () => {
             </BrowserRouter>
         </div>
     );
-};
+    
+}
 
 export default App;
