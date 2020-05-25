@@ -15,10 +15,12 @@ const App = () => {
                         <Link to="/users">Users</Link>
                     </li>
                 </ul>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path="/users" component={Users} />
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/users" component={Users} />
+                </Switch>
             </BrowserRouter>
         </div>
     );
