@@ -9,6 +9,11 @@ const Dimensions = () => {
     useEffect(() => {
         const { innerHeight, innerWidth } = window;
         setDimensions({ width: innerWidth, height: innerHeight });
+        const handleResize = (e) => {
+            const { innerHeight, innerWidth } = e.target;
+            setDimensions({ width: innerWidth, height: innerHeight });
+        };
+        window.addEventListener("resize", handleResize);
     }, []);
 
     const { width, height } = dimensions;
