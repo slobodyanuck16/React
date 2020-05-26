@@ -14,6 +14,10 @@ const Dimensions = () => {
             setDimensions({ width: innerWidth, height: innerHeight });
         };
         window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
     }, []);
 
     const { width, height } = dimensions;
