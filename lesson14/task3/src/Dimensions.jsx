@@ -17,7 +17,7 @@ const Dimensions = () => {
 
         return () => {
             window.removeEventListener("resize", handleResize);
-        }
+        };
     }, []);
 
     const { width, height } = dimensions;
